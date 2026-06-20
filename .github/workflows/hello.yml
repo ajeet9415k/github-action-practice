@@ -1,0 +1,23 @@
+# Workflows
+# Should Have Name
+name: Hello
+
+# On tells when the workflow should run
+on:
+  workflow_dispatch:
+
+# Jobs
+# Job tells what the workflow should do
+# There can be one or more jobs
+# jobs is an object so needs indentation
+jobs:
+  # 1st Job
+  say-hello:
+    # Creates an Ephemeral Container with Ubuntu running
+    runs-on: ubuntu-latest
+
+    # Steps
+    # Should be inside the job
+    steps:
+      - name: Say hello to everyone
+        run: echo "Hello Dosto"
